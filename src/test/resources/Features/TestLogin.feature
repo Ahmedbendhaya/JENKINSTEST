@@ -1,4 +1,3 @@
-@TALAC-810
 Feature: LOGINTA
 
 	@TEST_TALAC-811
