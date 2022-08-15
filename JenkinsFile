@@ -14,7 +14,7 @@ pipeline {
             steps {
                 git branch: 'main', url: 'https://github.com/Ahmedbendhaya/JENKINSTEST.git'
                 bat'mvn test'
-             step([$class: 'XrayImportBuilder', endpointName: '/junit', importFilePath: 'target/surefire-reports/testng-results.xml', importInParallel: 'false', importToSameExecution: 'false', projectKey: 'TAL', serverInstance: 'SERVER-4dd45df2-46e3-4948-8e8d-873bdb51aa8e', testExecKey: 'TAL-2'])
+            step([$class: 'XrayImportBuilder', endpointName: '/testng', importFilePath: 'target/surefire-reports/testng-results.xml', importInParallel: 'false', importToSameExecution: 'false', projectKey: 'TAL', serverInstance: 'SERVER-4dd45df2-46e3-4948-8e8d-873bdb51aa8e', testExecKey: 'TAL-2'])
             }
         }  
     }
