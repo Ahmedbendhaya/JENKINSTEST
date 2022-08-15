@@ -18,7 +18,7 @@ import LoginPage.LoginPage;
 		
 		WebDriver driver= null;
 		LoginPage login;
-		@Test(priority=0)
+		
 		@Given("i am on TA login Page")
 		public void i_am_on_TA_login_Page() {
 			String projectPath = System.getProperty("user.dir");
@@ -34,22 +34,22 @@ import LoginPage.LoginPage;
 			login = new LoginPage(driver) ;
 			login.AccessLogin();
 		}
-		@Test(priority=1)
+		
 		@When("I add my mail and password")
 		public void i_add_my_mail() {
 			login.Login_information("ahmed-baha-eddine.ben-dhaya@talan.com","22080023Ahm@d");
 		}
-		@Test(priority=2)
+		
 		@When("click on OK")
 		public void click_on_OK() {
 			login.connect();
 		}
-		@Test(priority=3)
+		
 		@Then("The dashboard will be opened")
 		public void the_dashboard_will_be_opened() {
 			login.Verifyconncorrect();
 		}
-		@Test(priority=4)
+		
 		@Then("the browser must be closed")
 		public void the_browser_must_be_closed() {
 			driver.close();
