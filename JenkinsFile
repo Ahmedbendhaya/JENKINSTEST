@@ -14,7 +14,7 @@ pipeline {
             steps {
                 git branch: 'main', url: 'https://github.com/Ahmedbendhaya/JENKINSTEST.git'
                 bat'mvn test'
-                jiraAddComment comment: 'Comment from jenkins', idOrKey: 'TALAC-107', site: ''
+                jiraAddComment comment: 'Comment from jenkins', idOrKey: 'TALAC-107', site: 'https://academy-talan.atlassian.net/'
             }
         }  
     }
