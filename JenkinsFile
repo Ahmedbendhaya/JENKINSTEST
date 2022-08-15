@@ -4,13 +4,13 @@ pipeline {
     stages {
         stage('checkout') {
             steps {
-                checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: 'MyGitHub', url: 'https://github.com/Ahmedbendhaya/TALogin.git']]])
+                checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: 'MyGitHub', url: 'https://github.com/Ahmedbendhaya/JENKINSTEST.git']]])
             }
         }
          stage('build') {
 
             steps {
-                git branch: 'main', url: 'https://github.com/Ahmedbendhaya/TALogin.git'
+                git branch: 'main', url: 'https://github.com/Ahmedbendhaya/JENKINSTEST.git'
 
                 bat'mvn test'
             }
