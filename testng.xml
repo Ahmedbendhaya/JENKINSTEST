@@ -3,7 +3,7 @@
 <suite name="Suite">
   <test thread-count="5" name="Testng">
     <classes>
-      <class name="TestLogin.TestLogin">
+      <class name="Runner.TestRun">
       </class>
       
     </classes>
