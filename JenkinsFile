@@ -1,11 +1,19 @@
 pipeline {
-	agent any
-	stages {
-		stage("Build") {
-			steps {
-			sh "mvn --version"
-			sh "mvn clean install"
-			}
-		}
-	}
+
+    agent any
+    stages {
+        stage('checkout') {
+            steps {
+                checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: 'MyGitHub', url: 'https://github.com/Ahmedbendhaya/TALogin.git']]])
+            }
+        }
+         stage('build') {
+
+            steps {
+                git branch: 'main', url: 'https://github.com/Ahmedbendhaya/TALogin.git'
+
+                bat'mvn test'
+            }
+        }  
+    }
 }
