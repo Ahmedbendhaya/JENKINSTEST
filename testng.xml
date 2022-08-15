@@ -4,7 +4,8 @@
   <test thread-count="5" name="Testng">
     <classes>
       <class name="TestLogin.TestLogin">
-      </class> 
+      </class>
+      
     </classes>
   </test> <!-- Testng -->
 </suite> <!-- Suite -->
