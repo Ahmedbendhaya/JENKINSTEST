@@ -1,0 +1,101 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "start_timestamp": "2022-08-16T09:42:15.400Z",
+        "line": 5,
+        "name": "Connexion Talan Academy",
+        "description": "",
+        "id": "connexion;connexion-talan-academy",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 10780129700,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "i am on TA login Page",
+            "match": {
+              "location": "TestLogin.TestLogin.i_am_on_TA_login_Page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 349558000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "I add my mail and password",
+            "match": {
+              "location": "TestLogin.TestLogin.i_add_my_mail()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 2265051200,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "click on OK",
+            "match": {
+              "location": "TestLogin.TestLogin.click_on_OK()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 46747300,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "The dashboard will be opened",
+            "match": {
+              "location": "TestLogin.TestLogin.the_dashboard_will_be_opened()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 78761400,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "the browser must be closed",
+            "match": {
+              "location": "TestLogin.TestLogin.the_browser_must_be_closed()"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@TAL-2"
+          },
+          {
+            "name": "@TEST_TAL-1"
+          }
+        ]
+      }
+    ],
+    "name": "Connexion",
+    "description": "",
+    "id": "connexion",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/Features/TestLogin.feature",
+    "tags": [
+      {
+        "name": "@TAL-2",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  }
+]
