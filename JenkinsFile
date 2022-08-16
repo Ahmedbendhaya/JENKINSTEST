@@ -14,10 +14,8 @@ pipeline {
             steps {
                 git branch: 'main', url: 'https://github.com/Ahmedbendhaya/JENKINSTEST.git'
                 bat'mvn test'
-                step([$class: 'XrayImportFeatureBuilder', credentialId: '', folderPath: 'C:\\Users\\abendhaya\\Downloads\\featureBundle (7)', lastModified: '', preconditions: '', projectKey: 'TAL', serverInstance: 'CLOUD-4dd45df2-46e3-4948-8e8d-873bdb51aa8e', testInfo: ''])
-            step([$class: 'XrayImportBuilder', endpointName: '/testng', importFilePath: 'target/surefire-reports/testng-results.xml', importInParallel: 'false', importToSameExecution: 'false', projectKey: 'TAL', serverInstance: 'SERVER-4dd45df2-46e3-4948-8e8d-873bdb51aa8e', testExecKey: 'TAL-2'])
-            step([$class: 'XrayExportBuilder', credentialId: '', filePath: 'C:\\Users\\abendhaya\\Desktop\\projet', issues: 'TAL-1', serverInstance: 'CLOUD-4dd45df2-46e3-4948-8e8d-873bdb51aa8e'])
-           }
+                step([$class: 'XrayImportBuilder', endpointName: '/cucumber', importFilePath: 'target/Connexion.json', importInParallel: 'false', serverInstance: 'CLOUD-4dd45df2-46e3-4948-8e8d-873bdb51aa8e'])
+            }
         }  
     }
 }
